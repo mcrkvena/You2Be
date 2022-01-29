@@ -4,3 +4,5 @@ export default {
     username: '',
     playlist: ''
 }
+
+//STORE ZA PODATKE
