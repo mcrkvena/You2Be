@@ -1,0 +1,16 @@
+{
+  "name": "you2be-backend",
+  "version": "1.0.0",
+  "description": "You2Be backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "ws": "^8.4.2"
+  }
+}

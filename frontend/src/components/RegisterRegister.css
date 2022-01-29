@@ -1,0 +1,105 @@
+.tekstregisterregister {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 70px;
+    position:absolute;
+    padding-left: 33%;
+    margin-top: 180px;
+}
+.pozadinaregisterregister {
+    position: absolute;
+    width: 960px;
+    height: 986px;
+    margin-left: 960px;
+    margin-top: -150px;
+    background: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    text-align: left;
+}
+
+.buttonregisterregister {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    background: rgba(246, 52, 52, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-top: 740px;
+    margin-left: 290px;
+}
+
+.registerregisteremail {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 340px;
+    margin-left: 290px;
+}
+
+.registerregisterusername {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 440px;
+    margin-left: 290px;
+}
+
+.registerregisterpassword {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 540px;
+    margin-left: 290px;
+}
+
+.registerregisterconfirmpassword {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 640px;
+    margin-left: 290px;
+}
+
+br {
+    display: block;
+    content: "";
+    margin-top: -30px;
+}

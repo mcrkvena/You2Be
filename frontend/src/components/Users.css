@@ -1,0 +1,39 @@
+.tekstusers {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    position:absolute;
+    padding-left: 110px;
+    margin-top: 20px;
+}
+
+.pozadinausers {
+    position: absolute;
+    width: 287px;
+    height: 322px;
+    margin-left: 20px;
+    margin-top: 90px;
+    background: rgba(255, 255, 255, 0.15);
+    background-size: cover;
+    text-align: left;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.listausera {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding-left: 40px;
+    line-height: 5px;
+}
+
+.listausera p {
+    margin-top: 15px;
+}

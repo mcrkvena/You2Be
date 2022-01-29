@@ -1,0 +1,73 @@
+.tekstloginlogin {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 66px;
+    position:absolute;
+    margin-top: 130px;
+    margin-left: 363px;
+}
+
+.buttonloginlogin {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    background: rgba(246, 52, 52, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 289px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-top: 460px;
+    margin-left: 324px;
+}
+
+.buttonlogoutlogin {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    background: rgba(246, 52, 52, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 289px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 324px;
+}
+
+.loginloginemail {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 260px;
+    margin-left: 280px;
+}
+
+.loginloginpassword {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 370px;
+    height: 65px;
+    text-align: center;
+    margin-top: 360px;
+    margin-left: 280px;
+}

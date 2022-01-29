@@ -1,0 +1,43 @@
+.tekstplaylist {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    position:absolute;
+    margin-left: 1710px;
+    margin-top: -110px;
+}
+
+.pozadinaplaylist {
+    position: absolute;
+    width: 305px;
+    height: 1031px;
+    margin-left: 1615px;
+    margin-top: -195px;
+    background: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    text-align: left;
+}
+
+.fakeheader {
+    background-color: burlywood;
+    height: 195px;
+    opacity: 0;
+}
+
+.playlistitem {
+    width: 271px;
+    height: 202px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.35);
+    margin-left: 6%;
+    border: none;
+}
+
+.playlistiframe {
+    width: 251px;
+    height: 165px;
+    margin-left: 10px;
+    margin-top: 3%;
+    border: none;
+}

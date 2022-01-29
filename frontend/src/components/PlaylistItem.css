@@ -1,0 +1,75 @@
+.blocker {
+    width: 101%;
+    height: 102%;
+    background-color: red;
+    position: relative;
+    transform:translateY(-106%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.naslov {
+    font-size: 16px;
+    font-family: 'Segoe UI';
+    color: rgba(255, 255, 255, 0.3);
+    transform:translateY(-50%);
+    height: 40px;
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.removevideo {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    z-index: 2;
+    background-image: url('../assets/removevideobutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.playlistup {
+    position: absolute;
+    bottom: 60px;
+    right: 12px;
+    height: 25px;
+    width: 18px;
+    text-align: center;
+    z-index: 2;
+    background-image: url('../assets/uparrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.playlistdown {
+    position: absolute;
+    bottom: 30px;
+    right: 12px;
+    height: 25px;
+    width: 18px;
+    text-align: center;
+    z-index: 2;
+    background-image: url('../assets/downarrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.removevideo:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+.playlistup:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.playlistdown:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}

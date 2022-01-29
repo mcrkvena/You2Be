@@ -1,0 +1,46 @@
+.tekst {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 70px;
+}
+.pozadina {
+    position: absolute;
+    width: 633px;
+    height: 986px;
+    margin-top: -150px;
+    margin-left: 1150px;
+    background: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    text-align: left;
+}
+
+.buttonloginhome {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 289px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-left: 90px;
+}
+
+.brbig {
+    display: block;
+    content: "";
+    margin-top: 50px;
+}
+
+.brsmall {
+    display: block;
+    content: "";
+    margin-top: -10px;
+}

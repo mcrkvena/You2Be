@@ -1,0 +1,40 @@
+.tekstregisterlogin {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 70px;
+    position:absolute;
+    padding-left: 33%;
+    margin-top: 280px;
+}
+.pozadinaregisterlogin {
+    position: absolute;
+    width: 960px;
+    height: 1016px;
+    margin-left: 960px;
+    margin-top: -150px;
+    background: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    text-align: left;
+}
+
+.buttonregisterlogin {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 289px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-top: 50px;
+}
+
+br {
+    display: block;
+    content: "";
+    margin-top: -30px;
+}

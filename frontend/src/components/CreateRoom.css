@@ -1,0 +1,48 @@
+.tekst1 {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 66px;
+    position:absolute;
+    margin-top: -8%;
+}
+
+.tekst2 {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 60px;
+    position:absolute;
+    margin-top: 0%;
+}
+
+.tekst3 {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 50px;
+    position:absolute;
+    margin-top: 8%;
+}
+
+.buttoncreateroom {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 56px;
+    background: rgba(246, 52, 52, 0.4);
+    border: 1px solid #707070;
+    border-radius: 40px;
+    padding: 20px;
+    width: 582px;
+    height: 185.5px;
+    position:absolute;
+    margin-top: 19%;
+}
+
+.pozadinacreateroom {
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 200px;
+    width: 874px;
+}

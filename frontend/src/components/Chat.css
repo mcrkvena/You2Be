@@ -1,0 +1,59 @@
+.tekstchat {
+    color: #C2BCBC;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 40px;
+    position:absolute;
+    padding-left: 120px;
+    margin-top: 420px;
+}
+
+.pozadinachat {
+    position: absolute;
+    width: 287px;
+    height: 322px;
+    margin-left: 20px;
+    margin-top: 490px;
+    background: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    text-align: left;
+}
+
+.tekstinputchat {
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 20px;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 30px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    border: none;
+}
+
+.tekstinputchat::placeholder {
+    color: white;
+  }
+
+.chatbox {
+    position: absolute;
+    width: 99%;
+    height: 283px;
+    top: 0;
+    background: rgba(255, 255, 255, 0.05);
+    background-size: cover;
+    text-align: left;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    color: white;
+    margin: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 1%;
+}
+chatbox.line-height {
+    margin-top: 10px;
+}
