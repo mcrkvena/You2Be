@@ -45,8 +45,6 @@ class Video extends Component{
     render(){
 
       const clickedplaylisturl = (url) => {
-        console.log("URL IZ VIDEOJSA");
-        console.log(url);
         this.state.currenturl = url;
         this.setState((state) => {
           return {toggle: !state.toggle};
