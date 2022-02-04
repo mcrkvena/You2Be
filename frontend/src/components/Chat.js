@@ -34,32 +34,42 @@ class Chat extends Component {
             ws.onopen = () => {
                 console.log("Connection established");
             }
-            ws.onmessage = async({data}) => {
-                const temptekst = await data.text();
-                if(temptekst === 'null' || temptekst === 'playlist'){
-                    return
+            ws.onmessage = async ({ data }) => {
+                const roomID = window.location.href.slice(-20);
+                const object = await data.text();
+                const parsedobject = JSON.parse(object);
+                if (parsedobject.event !== "chat" || parsedobject.roomId !== roomID) {
+                return;
                 }
-                const tekst = JSON.parse(temptekst);
-                showMessage(`${tekst.user}: ${tekst.text}\n`)
-            }
+                const tekst = parsedobject;
+                showMessage(`${tekst.user}: ${tekst.text}\n`);
+            };
             ws.onclose = function() {
                 ws = null;
             }
         }
 
-         messageBox.onkeypress = function(e) {
-             if(messageBox.value.length === 0) return;
-             if((e.key === 'Enter')){
-                if(!ws){
+        messageBox.onkeypress = function (e) {
+            if (messageBox.value.length === 0) return;
+            if (e.key === "Enter") {
+                if (!ws) {
                     showMessage("No WebSocket connection");
                     return;
                 }
-                const storage = JSON.parse(localStorage.getItem('store'));
-                ws.send(JSON.stringify({user: storage.username, text: messageBox.value}));
+                const roomID = window.location.href.slice(-20);
+                const storage = JSON.parse(localStorage.getItem("store"));
+                ws.send(
+                    JSON.stringify({
+                        event: "chat",
+                        user: storage.username,
+                        text: messageBox.value,
+                        roomId: roomID,
+                    })
+                );
                 let u = "You: ";
                 showMessage(`${u}${messageBox.value}\n`);
             }
-        }
+        };
 
         init();
     }

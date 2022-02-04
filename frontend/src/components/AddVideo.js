@@ -64,7 +64,9 @@ class AddVideo extends Component {
             return;
         }
         let newstring = this.state.link.replace('watch?v=', 'embed/');
-        this.uploadplaylistdata(newstring)
+        this.uploadplaylistdata(newstring);
+        const elem = e.target.querySelector('.tekstaddvideo');
+        elem.value = '';
         //this.props.onClickButton(newstring);
     }
 

@@ -10,8 +10,35 @@
     border: none;
 }
 
-.dummydiv {
-    width: 500px;
-    height: 500px;
-    background-color: red;
+.shareroom {
+    width: 242px;
+    height: 65px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 760px;
+    margin-left: 1360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.sharelinkznakic {
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/sharelinkwhite.png');
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.shareroom:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
 }

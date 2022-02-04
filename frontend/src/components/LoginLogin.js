@@ -25,6 +25,7 @@ class LoginLogin extends Component {
 
         }
         const logout = () => {
+            localStorage.removeItem("store");
             signOut(auth);
           }
         const login = async (e) => {

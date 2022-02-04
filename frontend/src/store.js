@@ -2,7 +2,6 @@ export default {
     authenticated: false,
     userEmail: '',
     username: '',
-    playlist: ''
+    playlist: '',
+    currenturl: ''
 }
-
-//STORE ZA PODATKE

@@ -4,8 +4,8 @@ import Users from "../components/Users";
 import Chat from "../components/Chat";
 import Playlist from "../components/Playlist";
 import VideoPlayer from "../components/VideoPlayer";
-import { collection, doc, setDoc, getDoc, updateDoc, arrayUnion, deleteField, arrayRemove } from "firebase/firestore";
-import { auth, db } from "../firebase-config";
+import { doc, getDoc, updateDoc, arrayUnion} from "firebase/firestore";
+import { db } from "../firebase-config";
 import store from "../store";
 
 class Video extends Component{
@@ -23,7 +23,6 @@ class Video extends Component{
     uploadroomdata = async() => {
       const roomID = window.location.href.slice(-20);
       const storage = JSON.parse(localStorage.getItem('store'));
-      //await setDoc(doc(db, "rooms", roomID), {userlist: [storage.username]});
       await updateDoc(doc(db, "rooms", roomID), {userlist: arrayUnion(storage.username)});
     }
 
@@ -44,19 +43,10 @@ class Video extends Component{
 
     render(){
 
-      const clickedplaylisturl = (url) => {
-        this.state.currenturl = url;
-        this.setState((state) => {
-          return {toggle: !state.toggle};
-        });
-      }
-
-      // const getvideourl = (link) => {
-      //   this.state.playlist = [...this.state.playlist, link];
-      //   this.setState((state) => {
-      //     return {toggle: !state.toggle};
-      //   });
-      // }
+      const clickedplaylisturl = async(url) => {
+        store.currenturl = url;
+        this.setState(state => state.currenturl = url);
+      };
 
       const ekstrakcijaplayliste = (playlist) => {
         this.setState(state => state.playlist = playlist);
@@ -68,7 +58,7 @@ class Video extends Component{
                 <Users />
                 <Chat />
                 <Playlist playlist={this.state.playlist} ekstrakcijaurla={clickedplaylisturl} updateplaylist={this.updateplaylist} />
-                <VideoPlayer url={this.state.currenturl}/>
+                <VideoPlayer url={this.state.currenturl} />
             </div>
           );
     }

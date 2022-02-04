@@ -60,11 +60,9 @@ class PlaylistItem extends Component {
     getTitle = async() => {
         const response = await fetch(`https://noembed.com/embed?url=${this.props.id}`);
         const data = await response.json();
-        this.setState(state => state.title = data.title);
-    }
-
-    componentDidUpdate(){
-        this.getTitle();
+        if(this.state.title !== data.title){
+            this.setState(state => state.title = data.title);
+        } else return;
     }
 
     componentDidMount(){
@@ -75,6 +73,10 @@ class PlaylistItem extends Component {
         // }
         this.getTitle();
         this.init();
+    }
+
+    componentDidUpdate(){
+        this.getTitle();
     }
 
     render(){

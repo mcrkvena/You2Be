@@ -32,7 +32,6 @@ class App extends Component {
       if(docsnap.exists()){
           store.username = docsnap.data().username;
           localStorage.setItem("store", JSON.stringify(store));
-          const storage = JSON.parse(localStorage.getItem('store'));
       }
     }
 

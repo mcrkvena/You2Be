@@ -19,9 +19,10 @@ class Users extends Component {
         const docref = doc(db, "rooms", roomID);
         const docsnap = await getDoc(docref);
         if(docsnap.exists()){
-            this.state.currentuserlist = docsnap.data().userlist;
+            //this.state.currentuserlist = docsnap.data().userlist;
+            this.setState(state => state.currentuserlist = docsnap.data().userlist);
         }
-        this.setState(state => state.toggle = !state.toggle)
+        //this.setState(state => state.toggle = !state.toggle)
       }
 
     getusernumber() {
