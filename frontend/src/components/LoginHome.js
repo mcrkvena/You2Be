@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './LoginHome.css';
 import store from "../store.js";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase-config";
 
 class LoginHome extends Component {
 
@@ -22,11 +24,10 @@ class LoginHome extends Component {
         window.location.href = "/login";
     }
 
-    // data() {
-    //     return {
-    //       store
-    //     }
-    //   }
+    logout = () => {
+        localStorage.removeItem("store");
+        signOut(auth);
+    }
 
     render(){
         return (
@@ -48,6 +49,7 @@ class LoginHome extends Component {
                 { !store.authenticated && <button className="buttonloginhome" onClick={this.loginhandler}>
                     Login
                 </button>}
+                <button className="buttonlogout" onClick={this.logout}>Logout</button>
                 </pre>
             </div>
           );

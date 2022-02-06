@@ -40,9 +40,14 @@
     margin-left: 324px;
 }
 
+.buttonloginlogin:hover {
+    cursor: pointer;
+    background: rgba(246, 52, 52, 0.6);
+}
+
 .loginloginemail {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;
@@ -58,7 +63,7 @@
 
 .loginloginpassword {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;

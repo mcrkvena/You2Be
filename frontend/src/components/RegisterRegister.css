@@ -34,9 +34,14 @@
     margin-left: 290px;
 }
 
+.buttonregisterregister:hover {
+    cursor: pointer;
+    background: rgba(246, 52, 52, 0.6);
+}
+
 .registerregisteremail {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;
@@ -52,7 +57,7 @@
 
 .registerregisterusername {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;
@@ -68,7 +73,7 @@
 
 .registerregisterpassword {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;
@@ -84,7 +89,7 @@
 
 .registerregisterconfirmpassword {
     color: #C2BCBC;
-    font-family: CocoSharp;
+    font-family: 'Segoe UI';
     font-weight: 200;
     font-size: 36px;
     position:absolute;

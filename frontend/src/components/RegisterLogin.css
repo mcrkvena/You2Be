@@ -33,6 +33,11 @@
     margin-top: 50px;
 }
 
+.buttonregisterlogin:hover {
+    cursor: pointer;
+    background: rgba(9, 217, 68, 0.4)
+}
+
 br {
     display: block;
     content: "";

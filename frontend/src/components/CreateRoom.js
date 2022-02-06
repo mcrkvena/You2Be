@@ -24,6 +24,7 @@ class CreateRoom extends Component {
         for ( let i = 0; i < 10; i++ ) {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
+        localStorage.setItem("storenoreg", result);
         await setDoc(doc(db, "rooms", roomID), {userlist: arrayUnion(result)});
       }
       

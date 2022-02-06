@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './Users.css';
 import store from "../store";
-import { doc, getDoc, updateDoc, arrayRemove, deleteDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc, arrayRemove, deleteDoc, arrayUnion } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 
 class Users extends Component {
@@ -47,9 +47,33 @@ class Users extends Component {
             }
             ws = new WebSocket('ws://localhost:5000');
             ws.onopen = async() => {
-                console.log("User List Connected!");
-                await ws.send(null);
-                setTimeout(chain, 1000);
+                const storage = JSON.parse(localStorage.getItem('store'));
+                const roomID = window.location.href.slice(-20);
+                if(storage){
+                    console.log("User List Connected!");
+                    await ws.send(null);
+                    setTimeout(chain, 1000);
+                } else {
+                    const storenoreg = localStorage.getItem('storenoreg');
+                    if(storenoreg){ 
+                        await updateDoc(doc(db, "rooms", roomID), {userlist: arrayUnion(storenoreg)});
+                        console.log("User List Connected!");
+                        await ws.send(null);
+                        setTimeout(chain, 1000);
+                    } else {
+                        let result           = '';
+                        let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        let charactersLength = characters.length;
+                        for ( let i = 0; i < 10; i++ ) {
+                            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                        }
+                        localStorage.setItem("storenoreg", result);
+                        await updateDoc(doc(db, "rooms", roomID), {userlist: arrayUnion(result)});
+                        console.log("User List Connected!");
+                        await ws.send(null);
+                        setTimeout(chain, 1000);
+                    }
+                }
             }
             ws.onmessage = async({data}) => {
                 const temptekst = await data.text();
@@ -65,7 +89,12 @@ class Users extends Component {
             window.addEventListener("beforeunload", () => {
                 const roomID = window.location.href.slice(-20);
                 const storage = JSON.parse(localStorage.getItem('store'));
-                updateDoc(doc(db, "rooms", roomID), {userlist: arrayRemove(storage.username)});
+                if(storage){
+                    updateDoc(doc(db, "rooms", roomID), {userlist: arrayRemove(storage.username)});
+                } else {
+                    const storenoreg = localStorage.getItem('storenoreg');
+                    updateDoc(doc(db, "rooms", roomID), {userlist: arrayRemove(storenoreg)});
+                }
                 ws.send(null);
                 if(broj() == 0){
                         deleteDoc(doc(db, "rooms", roomID));

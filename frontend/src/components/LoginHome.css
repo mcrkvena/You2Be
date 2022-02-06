@@ -33,6 +33,33 @@
     margin-left: 90px;
 }
 
+.buttonloginhome:hover {
+    cursor: pointer;
+    background: rgba(9, 217, 68, 0.4)
+}
+
+.buttonlogout {
+    color: white;
+    font-family: CocoSharp;
+    font-weight: 200;
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #707070;
+    border-radius: 20px;
+    width: 289px;
+    height: 65px;
+    position:absolute;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 100px;
+}
+
+.buttonlogout:hover {
+    cursor: pointer;
+    background: rgba(246, 52, 52, 0.4);
+
+}
+
 .brbig {
     display: block;
     content: "";

@@ -24,16 +24,12 @@ class LoginLogin extends Component {
             }
 
         }
-        const logout = () => {
-            localStorage.removeItem("store");
-            signOut(auth);
-          }
         const login = async (e) => {
             e.preventDefault();
             try {
                 const user = await signInWithEmailAndPassword(auth, this.state.loginEmail, this.state.loginPassword);
                 await getuserdata(this.state.loginEmail);
-                // window.location.href = "/";
+                window.location.href = "/";
             } catch(error) {
                 console.log(error.message);
                 alert(`ERROR: ${error.message}`);
@@ -43,7 +39,6 @@ class LoginLogin extends Component {
         return (
             <div>
             <p className="tekstloginlogin">LOGIN</p>
-            <button className="buttonlogoutlogin" onClick={logout}>LOGOUT</button>
             <form>
                 <input className="loginloginemail" type="text" name="email" placeholder="Email" onChange={(event) => {this.setState({ loginEmail: event.target.value });}} />
                 <input className="loginloginpassword" type="password" name="password" placeholder="Password" onChange={(event) => {this.setState({ loginPassword: event.target.value });}} />

@@ -40,5 +40,5 @@
 
 .shareroom:hover {
     cursor: pointer;
-    filter: brightness(1.5);
+    filter: brightness(0.7);
 }

@@ -5,14 +5,14 @@
     font-size: 70px;
     position:absolute;
     padding-left: 33%;
-    margin-top: 360px;
+    margin-top: 160px;
 }
 .pozadinaloginregister {
     position: absolute;
     width: 960px;
-    height: 986px;
+    height: 600px;
     margin-left: -30px;
-    margin-top: -200px;
+    margin-top: 0px;
     text-align: left;
 }
 
@@ -30,6 +30,11 @@
     text-align: center;
     margin-top: 80px;
     margin-left: 20px;
+}
+
+.buttonloginregister:hover {
+    cursor: pointer;
+    background: rgba(9, 217, 68, 0.4)
 }
 
 br {

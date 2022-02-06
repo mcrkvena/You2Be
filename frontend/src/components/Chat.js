@@ -58,14 +58,26 @@ class Chat extends Component {
                 }
                 const roomID = window.location.href.slice(-20);
                 const storage = JSON.parse(localStorage.getItem("store"));
-                ws.send(
-                    JSON.stringify({
-                        event: "chat",
-                        user: storage.username,
-                        text: messageBox.value,
-                        roomId: roomID,
-                    })
-                );
+                const storenoreg = localStorage.getItem("storenoreg");
+                if(storage){          
+                    ws.send(
+                        JSON.stringify({
+                            event: "chat",
+                            user: storage.username,
+                            text: messageBox.value,
+                            roomId: roomID,
+                        })
+                    );
+                }else {
+                    ws.send(
+                        JSON.stringify({
+                            event: "chat",
+                            user: storenoreg,
+                            text: messageBox.value,
+                            roomId: roomID,
+                        })
+                    );
+                }
                 let u = "You: ";
                 showMessage(`${u}${messageBox.value}\n`);
             }

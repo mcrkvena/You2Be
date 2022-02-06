@@ -40,6 +40,11 @@
     margin-top: 19%;
 }
 
+.buttoncreateroom:hover {
+    cursor: pointer;
+    background: rgba(246, 52, 52, 0.6);
+}
+
 .pozadinacreateroom {
     position: absolute;
     margin-top: 220px;

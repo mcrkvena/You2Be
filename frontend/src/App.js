@@ -47,9 +47,13 @@ class App extends Component {
       }
     })
 
+    const homeclick = () => {
+      window.location.href = `/`;
+    }
+
       return (
           <div className="App" style={bgstyle}>
-            <h1 className="logo">You2Be</h1>
+            <h1 className="logo" onClick={homeclick}>You2Be</h1>
             <BrowserRouter>
                 <Routes>
                   <Route exact path="/" element={<Home/>} />
