@@ -29,3 +29,8 @@
     margin-top: -110px;
     margin-left: 1300px;
 }
+
+.buttonaddvideo:hover {
+    cursor: pointer;
+    background: rgba(173, 0, 0, 1);
+}

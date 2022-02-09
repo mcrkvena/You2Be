@@ -72,7 +72,7 @@ class Video extends Component {
 
     if (!window.YT) {
       const tag = document.createElement("script");
-      tag.src = "http://www.youtube.com/iframe_api";
+      tag.src = "https://www.youtube.com/iframe_api";
 
       window.onYouTubeIframeAPIReady = loadVideo;
 
@@ -99,7 +99,7 @@ class Video extends Component {
       ws.onerror = ws.onopen = ws.onclose = null;
       ws.close();
     }
-    ws = new WebSocket("ws://localhost:5000");
+    ws = new WebSocket("wss://you2be-project.herokuapp.com/");
     ws.onopen = async () => {
       console.log("Playlist Connected!");
       const roomID = window.location.href.slice(-20);

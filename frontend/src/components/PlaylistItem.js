@@ -54,7 +54,7 @@ class PlaylistItem extends Component {
             ws.onerror = ws.onopen = ws.onclose = null;
             ws.close();
         }
-        ws = new WebSocket('ws://localhost:5000');
+        ws = new WebSocket('wss://you2be-project.herokuapp.com/');
     }
 
     getTitle = async() => {
